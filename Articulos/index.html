@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articulos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pangolin&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(223, 211, 251);
+        }
+        h1{
+            font-family: 'Pacifico', cursive;
+            color: rgb(49, 152, 123);
+            font-size: 40px;
+        }
+        table{
+            border: 2px solid rgb(49, 152, 123);
+            background-color: rgb(49, 152, 123);
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 80%;
+        }
+        th{
+            text-align: center;
+            background-color: rgba(191, 249, 233, 0.902);
+        }
+        td{
+            text-align: center;
+            background-color: white;
+        }
+        h3{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+            document.write("<center><h1>Articulos</h1></center>")
+            articulo = prompt("¿Qué articulo desea?")
+            cantidad = prompt("Coloque la cantidad que desee del articulo")
+            precio = prompt("Ingrese el precio de cada uno")
+
+            subtotal = cantidad * precio
+            descuento = subtotal * 0.25
+            subtotalDesc = subtotal - descuento
+            
+            if(cantidad >=5)
+            {
+                resp = confirm("¿Deseas aplicar el descuento?")
+                if(resp==true){
+                document.write("<h3>Descuento del 25% aplicado</h3>")
+                document.write("<center><table border=1>")
+                document.write("<tr><th>Articulo</th><th>Cantidad</th><th>Precio</th><th>Subtotal</th><th>Descuento</th><th>Total</th></tr>")
+                document.write("<tr><td>" + articulo + "</td><td>" + cantidad + "</td><td>" + precio + "</td><td>" + subtotal + "</td><td>" + descuento + "</td><td>" + subtotalDesc + "</td></tr>")
+                document.write("</table></center>")
+                }
+                else{
+                document.write("<center><table border=1>")
+                document.write("<tr><th>Articulo</th><th>Cantidad</th><th>Precio</th><th>Subtotal</th><th>Descuento</th><th>Total</th></tr>")
+                document.write("<tr><td>" + articulo + "</td><td>" + cantidad + "</td><td>" + precio + "</td><td>" + subtotal + "</td><td>No se aplicó</td><td>" + subtotal + "</td></tr>")
+                document.write("</table></center>")
+                }
+            }
+            else{
+                document.write("<center><table border=1>")
+                document.write("<tr><th>Articulo</th><th>Cantidad</th><th>Precio</th><th>Subtotal</th><th>Descuento</th><th>Total</th></tr>")
+                document.write("<tr><td>" + articulo + "</td><td>" + cantidad + "</td><td>" + precio + "</td><td>" + subtotal + "</td><td>No aplicable</td><td>" + subtotal + "</td></tr>")
+                document.write("</table></center>")
+            }
+    </script>
+</body>
+</html>
