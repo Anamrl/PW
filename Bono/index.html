@@ -36,75 +36,30 @@
 </head>
 <body>
     <script>
-        document.write("<center><h1>Bono de fin de año</h1></center>")
-        document.write("<br>")
-        nombreE = prompt("Nombre del empleado")
-        depto = prompt("¿A qué departamento pertenece " +nombreE+ "?")
-        sueldoD = prompt("Sueldo diario que recibe")
-        antiguedad = prompt("¿Cuál es su antiguedad?")
-        diasT = prompt("¿Cuántos días lleva trabajando?")
+        document.write("<center><h1>Bono de fin de año</h1></center>");
+        document.write("<br>");
+        nombreE = prompt("Nombre del empleado");
+        depto = prompt("¿A qué departamento pertenece " +nombreE+ "?");
+        sueldoD = prompt("Sueldo diario que recibe");
+        antiguedad = prompt("¿Cuál es su antiguedad?");
+        diasT = prompt("¿Cuántos días lleva trabajando?");
 
-        subtotal = sueldoD * diasT
+        subtotal = sueldoD * diasT;
         if(antiguedad>15)
         {
-            bono = subtotal * 0.30
-            total = subtotal + bono
+            bono = subtotal * 0.30;
+            total = subtotal + bono;
         }
         else
         {
-            bono = subtotal * 0.15
-            total = subtotal + bono
+            bono = subtotal * 0.15;
+            total = subtotal + bono;
         }
 
-        document.write("<center>")
-        document.write("<table border = 1 width = 80%>")
-            document.write("<tr>")
-                document.write("<th>")
-                document.write("Nombre")
-                document.write("</th>")
-                document.write("<th>")
-                document.write("Depto")
-                document.write("</th>")
-                document.write("<th>")
-                document.write("Salario Diario")
-                document.write("</th>")
-                document.write("<th>")
-                document.write("Dias trabajados")
-                document.write("</th>")
-                document.write("<th>")
-                document.write("Subtotal")
-                document.write("</th>")
-                document.write("<th>")
-                document.write("Bono")
-                document.write("</th>")
-                document.write("<th>")
-                document.write("Total")
-                document.write("</th>")
-            document.write("</tr>")
-            document.write("<tr>")
-                document.write("<td>")
-                document.write(nombreE)
-                document.write("</td>")
-                document.write("<td>")
-                document.write(depto)
-                document.write("</td>")
-                document.write("<td>")
-                document.write(sueldoD)
-                document.write("</td>")
-                document.write("<td>")
-                document.write(diasT)
-                document.write("</td>")
-                document.write("<td>")
-                document.write(subtotal)
-                document.write("</td>")
-                document.write("<td>")
-                document.write(bono)
-                document.write("</td>")
-                document.write("<td>")
-                document.write(total)
-                document.write("</td>")
-            document.write("</tr>")
-            document.write("</center>")
+        document.write("<center><table border = 1 width = 80%>")
+            document.write("<tr><th>Nombre</th><th>Depto</th><th>Salario Diario</th><th>Dias trabajados</th><th>Subtotal</th><th>Bono</th><th>Total</th></tr>")
+            document.write("<tr><td>" + nombreE + "</td><td>" + depto + "</td><td>" +sueldoD + "</td><td>" + diasT + "</td><td>" + subtotal + "</td><td>" + bono + "</td><td>" + total + "</td></tr>")
+            document.write("</table></center>")
     </script>
 </body>
 </html>
