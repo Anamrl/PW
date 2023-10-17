@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pangolin&display=swap" rel="stylesheet">
+    <title>Bono fin de año</title>
+    <style>
+        body{
+            background-color: rgb(223, 211, 251);
+        }
+        h1{
+            font-family: 'Pacifico', cursive;
+            color: rgb(49, 152, 123);
+            font-size: 40px;
+        }
+        table{
+            border: 2px solid rgb(49, 152, 123);
+            background-color: rgb(49, 152, 123);
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 80%;
+        }
+        th{
+            text-align: center;
+            background-color: rgba(191, 249, 233, 0.902);
+        }
+        td{
+            text-align: center;
+            background-color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+        document.write("<center><h1>Bono de fin de año</h1></center>")
+        document.write("<br>")
+        nombreE = prompt("Nombre del empleado")
+        depto = prompt("¿A qué departamento pertenece " +nombreE+ "?")
+        sueldoD = prompt("Sueldo diario que recibe")
+        antiguedad = prompt("¿Cuál es su antiguedad?")
+        diasT = prompt("¿Cuántos días lleva trabajando?")
+
+        subtotal = sueldoD * diasT
+        if(antiguedad>15)
+        {
+            bono = subtotal * 0.30
+            total = subtotal + bono
+        }
+        else
+        {
+            bono = subtotal * 0.15
+            total = subtotal + bono
+        }
+
+        document.write("<center>")
+        document.write("<table border = 1 width = 80%>")
+            document.write("<tr>")
+                document.write("<th>")
+                document.write("Nombre")
+                document.write("</th>")
+                document.write("<th>")
+                document.write("Depto")
+                document.write("</th>")
+                document.write("<th>")
+                document.write("Salario Diario")
+                document.write("</th>")
+                document.write("<th>")
+                document.write("Dias trabajados")
+                document.write("</th>")
+                document.write("<th>")
+                document.write("Subtotal")
+                document.write("</th>")
+                document.write("<th>")
+                document.write("Bono")
+                document.write("</th>")
+                document.write("<th>")
+                document.write("Total")
+                document.write("</th>")
+            document.write("</tr>")
+            document.write("<tr>")
+                document.write("<td>")
+                document.write(nombreE)
+                document.write("</td>")
+                document.write("<td>")
+                document.write(depto)
+                document.write("</td>")
+                document.write("<td>")
+                document.write(sueldoD)
+                document.write("</td>")
+                document.write("<td>")
+                document.write(diasT)
+                document.write("</td>")
+                document.write("<td>")
+                document.write(subtotal)
+                document.write("</td>")
+                document.write("<td>")
+                document.write(bono)
+                document.write("</td>")
+                document.write("<td>")
+                document.write(total)
+                document.write("</td>")
+            document.write("</tr>")
+            document.write("</center>")
+    </script>
+</body>
+</html>
