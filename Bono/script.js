@@ -46,7 +46,7 @@ function calcularSubtotal() {
     const rowHTML = "<tr><td>" + nombreE + "</td><td>" + depto + "</td><td>" + sueldoD + "</td><td>" + diasT + "</td><td>" + antiguedad + "</td><td>" + subtotal + "</td></tr>";
 
     // Obtener la referencia a la tabla con el ID "result-table" en el documento HTML
-    const table = document.getElementById("result-table");
+    const table = document.getElementById("tabla-resultado");
     table.insertAdjacentHTML('beforeend', rowHTML);// Inserta la fila HTML generada (rowHTML) al final de la tabla (result-table)
     }
 
